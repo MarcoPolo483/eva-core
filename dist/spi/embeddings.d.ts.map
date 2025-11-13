@@ -1,0 +1,1 @@
+{"version":3,"file":"embeddings.d.ts","sourceRoot":"","sources":["../../src/spi/embeddings.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,UAAU;IACzB,KAAK,CAAC,KAAK,EAAE,MAAM,EAAE,EAAE,OAAO,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,OAAO,CAAC,GAAG,OAAO,CAAC,MAAM,EAAE,EAAE,CAAC,CAAC;IAC/E,UAAU,CAAC,EAAE,MAAM,CAAC;CACrB"}

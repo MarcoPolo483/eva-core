@@ -1,0 +1,1 @@
+{"version":3,"file":"telemetry.js","sourceRoot":"","sources":["../../src/spi/telemetry.ts"],"names":[],"mappings":"AAOA,2DAA2D;AAC3D,MAAM,CAAC,MAAM,aAAa,GAAc;IACtC,IAAI,EAAE,GAAG,EAAE,GAAG,CAAC;IACf,IAAI,EAAE,GAAG,EAAE,GAAG,CAAC;IACf,KAAK,EAAE,GAAG,EAAE,GAAG,CAAC;IAChB,SAAS,EAAE,KAAK,EAAE,KAAK,EAAE,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE;CACrC,CAAC"}
