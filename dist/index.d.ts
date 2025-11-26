@@ -3,6 +3,8 @@ export * from "./domain/ids.js";
 export * from "./domain/messages.js";
 export * from "./domain/plan.js";
 export * from "./domain/events.js";
+export * from "./domain/app.js";
+export * from "./domain/app.schema.js";
 export * from "./spi/llm.js";
 export * from "./spi/embeddings.js";
 export * from "./spi/vector-store.js";

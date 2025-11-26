@@ -1,4 +1,19 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": { "noEmit": false }
+  "compilerOptions": {
+    "noEmit": false
+  },
+  "include": [
+    "src/index.ts",
+    "src/domain/**/*.ts",
+    "src/runtime/**/*.ts",
+    "src/spi/**/*.ts",
+    "src/util/**/*.ts"
+  ],
+  "exclude": [
+    "src/__tests__",
+    "src/database",
+    "src/examples",
+    "src/runtime/__tests__"
+  ]
 }
