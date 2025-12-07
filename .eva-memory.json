@@ -2,32 +2,69 @@
   "$schema": "https://marcopolo483.github.io/eva-suite/schemas/eva-memory-v1.json",
   "version": "1.0.0",
   "repo": {
-    "name": "REPO_NAME_PLACEHOLDER",
-    "pod": "POD_PLACEHOLDER",
-    "purpose": "DESCRIPTION_PLACEHOLDER",
+    "name": "eva-core",
+    "pod": "POD-F",
+    "purpose": "Domain models and business logic for EVA Suite. Provides User, Tenant, Space, Document, Query, Conversation entities with Pydantic validation. Repository interfaces for data access. Domain events for event-driven architecture. Reference implementation: OpenWebUI model patterns (SQLAlchemy + Pydantic).",
     "status": "active",
-    "owner": "OWNER_PLACEHOLDER",
-    "dependencies": [],
-    "lastUpdated": "2025-11-29T00:00:00Z"
+    "owner": "P04-LIB + P15-DVM",
+    "dependencies": [
+      "eva-orchestrator (specification in docs/SPECIFICATION.md)",
+      "pydantic (2.x for validation)",
+      "pytest (testing framework)",
+      "hypothesis (property-based testing)",
+      "mypy (type checking)",
+      "ruff (linting/formatting)"
+    ],
+    "lastUpdated": "2025-12-07T00:00:00Z"
   },
   "context": {
-    "summary": "SUMMARY_PLACEHOLDER",
-    "keyFiles": [],
-    "currentPhase": "Sprint 4 - Stabilization & Demo Prep",
+    "summary": "CRITICAL: BEFORE ANY WORK, read complete specification: docs/SPECIFICATION.md (1042 lines). Contains ALL domain entity requirements (User, Tenant, Space, Document, Query, Conversation), business logic, validation rules, domain events, repository interfaces, 12 quality gates, and 6-phase implementation plan. Use OpenWebUI model patterns (SQLAlchemy + Pydantic + JSON metadata + access control). Follow specification TO THE LETTER. No shortcuts. All 12 quality gates must pass (100% test coverage, 100% type safety with mypy strict, Hypothesis property tests, MkDocs documentation, Python package published).",
+    "keyFiles": [
+      "docs/SPECIFICATION.md (MUST READ FIRST - 1042 lines)",
+      "src/eva_core/domain/entities/user.py (User aggregate root)",
+      "src/eva_core/domain/entities/space.py (Space aggregate root)",
+      "src/eva_core/domain/entities/document.py (Document entity)",
+      "src/eva_core/repositories/base.py (Repository interface)",
+      "pyproject.toml (dependencies, package metadata)"
+    ],
+    "currentPhase": "BLOCKED: Must read docs/SPECIFICATION.md FIRST before any implementation work",
     "openIssues": 0,
-    "blockers": []
+    "blockers": [
+      "CRITICAL: Cannot start implementation without reading complete specification in docs/SPECIFICATION.md",
+      "CRITICAL: All 12 quality gates must pass (100% coverage, mypy strict, Hypothesis tests, packaging)",
+      "CRITICAL: Follow OpenWebUI model patterns exactly (SQLAlchemy schema + Pydantic models + JSON metadata)"
+    ]
   },
   "quality": {
     "testCoverage": 0,
     "lintWarnings": 0,
     "typeScriptStrict": false,
     "wcagCompliance": "N/A",
-    "bilingualStatus": "N/A"
+    "bilingualStatus": "EN-CA/FR-CA (entity names, validation error messages)"
   },
   "memory": {
-    "lessons": [],
-    "tools": [],
-    "patterns": []
+    "lessons": [
+      "Use Pydantic for data validation (automatic JSON schema generation)",
+      "Use Hypothesis for property-based testing (1000+ invalid inputs)",
+      "Follow OpenWebUI patterns: SQLAlchemy Base + Pydantic models + JSON metadata columns",
+      "PII masking: Auto-mask SIN/email/phone in __repr__ and logs",
+      "Repository pattern: Abstract interfaces, concrete implementations in eva-api/eva-rag"
+    ],
+    "tools": [
+      "pytest + pytest-asyncio (testing)",
+      "hypothesis (property-based testing)",
+      "mypy --strict (type checking)",
+      "ruff (linting + formatting)",
+      "MkDocs + mkdocstrings (documentation)",
+      "poetry (dependency management)"
+    ],
+    "patterns": [
+      "Aggregate Roots: Space (contains Documents), User (contains Preferences)",
+      "Value Objects: Email, PhoneNumber, SIN (immutable, with masking)",
+      "Domain Events: SpaceCreated, DocumentAdded, QueryExecuted",
+      "Repository Pattern: Abstract base, get_by_id/save/delete/list",
+      "Tenant Isolation: All entities have tenant_id, queries filtered by tenant"
+    ]
   },
   "reports": {
     "lastHousekeeping": null,
@@ -42,10 +79,10 @@
     "backupPath": ".eva-cache/backups/"
   },
   "_metadata": {
-    "createdBy": "TASK-002 Bootstrap Memory Template",
-    "createdAt": "2025-11-29T00:00:00Z",
+    "createdBy": "EVA-Orchestrator Specification Generation (eva-core domain models)",
+    "createdAt": "2025-12-07T00:00:00Z",
     "templateVersion": "1.0.0",
-    "lastModifiedBy": null,
-    "lastModifiedAt": null
+    "lastModifiedBy": "GitHub Copilot (P04-LIB + P15-DVM)",
+    "lastModifiedAt": "2025-12-07T00:00:00Z"
   }
 }
