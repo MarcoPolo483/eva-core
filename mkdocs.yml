@@ -1,0 +1,79 @@
+site_name: EVA Core Documentation
+site_description: Domain models and business logic for EVA Suite
+site_author: Marco Presta
+repo_url: https://github.com/MarcoPolo483/eva-core
+repo_name: MarcoPolo483/eva-core
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+  - Usage Guide:
+      - Entities: usage/entities.md
+      - Value Objects: usage/value-objects.md
+      - Domain Events: usage/domain-events.md
+      - Repositories: usage/repositories.md
+  - API Reference:
+      - Entities: api/entities.md
+      - Value Objects: api/value-objects.md
+      - Events: api/events.md
+      - Repositories: api/repositories.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Testing: development/testing.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: true
+            show_object_full_path: false
+            show_category_heading: true
+            members_order: source
+            group_by_category: true
+            show_if_no_docstring: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true

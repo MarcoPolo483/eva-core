@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\domain\events\space_events.py
+# hypothesis_version: 6.148.3
+
+[200, 255, 'DocumentAdded', 'MemberAdded', 'SpaceCreated']

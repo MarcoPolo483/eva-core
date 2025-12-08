@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\domain\entities\query.py
+# hypothesis_version: 6.148.3
+
+[0.0, 1.0, 500, 2000, 'completed', 'en', 'failed', 'pending', 'processing']

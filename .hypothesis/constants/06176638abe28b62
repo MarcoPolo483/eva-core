@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\__init__.py
+# hypothesis_version: 6.148.3
+
+['1.0.0', 'Citation', 'Conversation', 'ConversationStatus', 'Document', 'DocumentStatus', 'DocumentType', 'Email', 'MIT', 'Marco Presta', 'PhoneNumber', 'Query', 'QueryStatus', 'SIN', 'Space', 'SpaceMember', 'SpaceStatus', 'SpaceVisibility', 'Tenant', 'TenantQuotas', 'TenantStatus', 'User', 'UserPreferences', 'UserRole', 'UserStatus', '__author__', '__license__', '__version__']

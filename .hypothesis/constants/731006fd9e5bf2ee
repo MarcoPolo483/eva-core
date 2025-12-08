@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\domain\value_objects\sin.py
+# hypothesis_version: 6.148.3
+
+['Invalid SIN checksum', 'SIN must be 9 digits', '\\D', 'value']

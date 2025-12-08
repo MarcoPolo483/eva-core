@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\domain\entities\user.py
+# hypothesis_version: 6.148.3
+
+[200, '***', '@', 'America/Toronto', 'User', 'active', 'admin', 'analyst', 'auto', 'deleted', 'en-CA', 'entra_id', 'suspended', 'system', 'viewer']

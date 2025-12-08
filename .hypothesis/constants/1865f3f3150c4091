@@ -1,0 +1,4 @@
+# file: C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-core\src\eva_core\domain\entities\document.py
+# hypothesis_version: 6.148.3
+
+[255, '.docx', '.md', '.pdf', '.txt', 'application/pdf', 'deleted', 'en', 'failed', 'faq', 'filename', 'guidance', 'indexed', 'jurisprudence', 'other', 'pending', 'policy', 'processing']
