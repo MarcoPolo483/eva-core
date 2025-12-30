@@ -1,6 +1,6 @@
 {
-  "$schema": "https://marcopolo483.github.io/eva-suite/schemas/eva-memory-v1.json",
-  "version": "1.0.0",
+  "$schema": ".eva/.eva-memory.schema.json",
+  "version": "2.0.0",
   "repo": {
     "name": "eva-core",
     "pod": "POD-F",
@@ -16,6 +16,22 @@
       "ruff (linting/formatting)"
     ],
     "lastUpdated": "2025-12-07T00:00:00Z"
+  },
+  "scope": {
+    "memoryScope": "repo",
+    "repoTreePath": ".eva-cache/repo-tree.txt",
+    "suiteTreePath": "../eva-lwo/eva-suite-full-tree.txt"
+  },
+  "workspace": {
+    "version": "1.0.0",
+    "rules": {}
+  },
+  "memoryPolicy": {
+    "maxLessonSummaryChars": 400,
+    "requireEvidencePathsForClaims": true,
+    "lessonStorage": "centralized-catalog",
+    "catalogPath": "memory/catalog.json",
+    "lessonPath": "memory/lessons/"
   },
   "context": {
     "summary": "CRITICAL: BEFORE ANY WORK, read complete specification: docs/SPECIFICATION.md (1042 lines). Contains ALL domain entity requirements (User, Tenant, Space, Document, Query, Conversation), business logic, validation rules, domain events, repository interfaces, 12 quality gates, and 6-phase implementation plan. Use OpenWebUI model patterns (SQLAlchemy + Pydantic + JSON metadata + access control). Follow specification TO THE LETTER. No shortcuts. All 12 quality gates must pass (100% test coverage, 100% type safety with mypy strict, Hypothesis property tests, MkDocs documentation, Python package published).",
@@ -42,13 +58,20 @@
     "wcagCompliance": "N/A",
     "bilingualStatus": "EN-CA/FR-CA (entity names, validation error messages)"
   },
-  "memory": {
+  "knowledgeRegistry": {
+    "version": "3.0.0",
+    "model": "centralized-registry",
+    "catalogPath": "memory/catalog.json",
+    "toolsRegistry": "tools/registry.json",
+    "patternsDir": "docs/eva-patterns/"
+  },
+  "applied": {
     "lessons": [
-      "Use Pydantic for data validation (automatic JSON schema generation)",
-      "Use Hypothesis for property-based testing (1000+ invalid inputs)",
-      "Follow OpenWebUI patterns: SQLAlchemy Base + Pydantic models + JSON metadata columns",
-      "PII masking: Auto-mask SIN/email/phone in __repr__ and logs",
-      "Repository pattern: Abstract interfaces, concrete implementations in eva-api/eva-rag"
+      "LESSON-106",
+      "LESSON-107",
+      "LESSON-108",
+      "LESSON-109",
+      "LESSON-110"
     ],
     "tools": [
       "pytest + pytest-asyncio (testing)",
